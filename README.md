@@ -1,16 +1,17 @@
 # Hangman game
 Simple word game consists in guessing the drawn words.
 
-### Screenshots
-
-![Alt text](/screenshots/01.jpg?raw=true "Optional Title")
-
-
 
 ### Tech used
 * HTML
 * CSS
 * Pure JavaScript
+* Zero framework 😀
+
+
+### Screenshots
+
+![Alt text](images/screenshots/01.png?raw=true "Optional Title")
 
 
 ## Authors
@@ -18,7 +19,7 @@ Simple word game consists in guessing the drawn words.
 * **Kamil Maćkowiak**
 
 
-## 
+## License
 
 This project is licensed under the MIT License
 
