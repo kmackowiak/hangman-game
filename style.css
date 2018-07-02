@@ -1,16 +1,10 @@
 
-
 body {
-    /*font-family: 'Indie Flower', cursive;*/
-    /*font-family: 'Homemade Apple', cursive;*/
-    /*font-family: 'Just Me Again Down Here', cursive;*/
     font-family: 'Nanum Brush Script', cursive;
-
     background-color: darkslategrey;
     color: #FFFFFF;
     font-size: 16px;
 }
-
 
 h1 {
     font-size: 4rem;
@@ -19,28 +13,12 @@ h1 {
     text-transform: uppercase;
 }
 
-#good {
+#answer {
     font-size: 2rem;
 }
 
 #errors-img {
     width: 300px;
-}
-
-.container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 0% 15%;
-    height: 100vh;
-
-}
-
-
-.category__title {
-    font-size: 2rem;
 }
 
 #keyboard {
@@ -50,7 +28,20 @@ h1 {
     align-items: center;
     flex-wrap: wrap;
     align-content: center;
+}
 
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0% 15%;
+    height: 100vh;
+}
+
+.category__title {
+    font-size: 2rem;
 }
 
 .letterButton {
@@ -59,38 +50,24 @@ h1 {
     height: 3rem;
     background: none;
     color: #FFFFFF;
-    /*font-family: 'Just Me Again Down Here', cursive;*/
     font-family: 'Nanum Brush Script', cursive;
-
-    /*font-family: 'Homemade Apple', cursive;*/
     font-size: 1.8rem;
     margin: 0.5rem;
     border-radius: 0.5rem;
     line-height: 0rem;
-
-
-
-
-
 }
-
-
 
 .letterButton:disabled {
-background: url("images/scribbles.png") no-repeat;
-background-size: 100%;
-
+    background: url("images/scribbles.png") no-repeat;
+    background-size: 100%;
 }
-
 
 .modal {
     position: absolute;
     width: 95vw;
     height: 95vh;
     font-size: 6rem;
-
     top: 0;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -101,7 +78,6 @@ background-size: 100%;
     z-index: 5;
     overflow: hidden;
 }
-
 
 .blur {
     -webkit-filter: blur(10px);
