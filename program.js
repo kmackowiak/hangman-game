@@ -1,0 +1,155 @@
+
+questions = [
+    {category:"animals", answer:"alligator"},
+    {category:"animals", answer:"hamster"},
+    {category:"animals", answer:"tortoise"},
+    {category:"animals", answer:"hippopotamus"},
+    {category:"animals", answer:"leopard"},
+    {category:"animals", answer:"scorpion"},
+    {category:"animals", answer:"snake"},
+    {category:"animals", answer:"pigeon"},
+    {category:"animals", answer:"squirrel"},
+    {category:"body", answer:"stomach"},
+    {category:"body", answer:"hands"},
+    {category:"body", answer:"elbow"},
+    {category:"body", answer:"tongue"},
+    {category:"body", answer:"thumb"},
+    {category:"body", answer:"shoulders"},
+    {category:"computer", answer:"keyboard"},
+    {category:"computer", answer:"scanner"},
+    {category:"computer", answer:"keyboard"},
+    {category:"computer", answer:"software"},
+    {category:"computer", answer:"graphic"},
+    {category:"computer", answer:"processing"},
+    {category:"food", answer:"croissant"},
+    {category:"food", answer:"pancakes"},
+    {category:"food", answer:"ketchup"},
+    {category:"food", answer:"bread"},
+    {category:"food", answer:"sandwich"},
+    {category:"house", answer:"bathroom"},
+    {category:"house", answer:"bookcase"},
+    {category:"house", answer:"basement"},
+    {category:"house", answer:"furniture"},
+    {category:"house", answer:"foundation"},
+    {category:"house", answer:"window"},
+    {category:"food", answer:"mirror"}
+];
+
+var keyboard = document.getElementById("keyboard");
+var letterButton = keyboard.getElementsByClassName("letterButton");
+var categoryDiv = document.getElementById("drawn-category");
+
+
+var randomNumber = Math.floor((Math.random() * questions.length) + 1);
+console.log("Answer:",questions[randomNumber].answer);
+
+categoryDiv.innerHTML = (questions[randomNumber].category);
+
+
+var question = ((questions[randomNumber].answer).toLowerCase());
+
+
+
+
+var arrayQuestion = [];
+
+var questionX = question.split("");
+var questionLength = question.length;
+
+var turns = 0;
+var errors = 0;
+document.getElementById("good").innerHTML = arrayQuestion;
+
+
+
+
+
+arrayQuestionBlank()
+
+getValueButton()
+
+
+function arrayQuestionBlank() {
+    for (x = 0; x < questionLength; x++) {
+        arrayQuestion.push("_");
+
+        arrayQuestion.join(" ");
+
+    }
+};
+
+
+function getValueButton() {
+
+    var placesLetter = document.getElementById("good");
+
+
+    for (i = 0; i < letterButton.length; i++) {
+        placesLetter.innerHTML = arrayQuestion.join(" ");
+
+        letterButton[i].addEventListener('click', function (e) {
+            e.target.disabled = true;
+
+            turns++;
+            console.log("Turns :",turns);
+
+
+
+            var valueClicked = (e.target.value);
+            console.log("Clicked letter :",valueClicked);
+
+            var checkLetter = question.search(valueClicked);
+
+
+
+
+            if (checkLetter != -1) {
+                for (x = 0; x <= questionLength; x++) {
+                    if (questionX[x] == valueClicked) {
+                        arrayQuestion[x] = questionX[x];
+                    }
+                }
+
+                placesLetter.innerHTML = arrayQuestion.join(" ");
+            }
+            else {
+                errors++;
+                console.log("Errors: ",errors);
+                var errorsImg = document.getElementById("errors-img");
+
+                errorsImg.src = dupa();
+
+                    function dupa () {
+                    return "images/" + errors + ".png";
+                };
+
+
+
+                if (errors == 8) {
+
+                    document.getElementById("game-over").style.display = "flex";
+                    document.getElementsByClassName("container")[0].classList.add("blur");
+
+                }
+            }
+
+
+            function checkEmpty(blankSign) {
+                return blankSign == "_";
+            }
+
+            var dupaa = arrayQuestion.find(checkEmpty); // 130
+            console.log(dupaa)
+
+            if (dupaa == undefined)
+            {
+                document.getElementById("winner").style.display = "flex";
+                document.getElementsByClassName("container")[0].classList.add("blur");
+            }
+
+        });
+
+    }
+}
+
+

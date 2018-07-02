@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div>
+    <h1>Hangman game</h1>
+
+    </div>
+
+
+    <div class="category">
+        <h3 class="category__title">Category: <span id="drawn-category"></span></h3>
+
+    </div>
+
+    <div id="good"></div>
+
+    <div>
+        <img id="errors-img" src="images/0.png">
+    </div>
+
+
+
+
+    <div id="keyboard">
+        <input type="button" value="a" class="letterButton">
+        <input type="button" value="b" class="letterButton">
+        <input type="button" value="c" class="letterButton">
+        <input type="button" value="d" class="letterButton">
+        <input type="button" value="e" class="letterButton">
+        <input type="button" value="f" class="letterButton">
+        <input type="button" value="g" class="letterButton">
+        <input type="button" value="h" class="letterButton">
+        <input type="button" value="i" class="letterButton">
+        <input type="button" value="j" class="letterButton">
+        <input type="button" value="k" class="letterButton">
+        <input type="button" value="l" class="letterButton">
+        <input type="button" value="m" class="letterButton">
+        <input type="button" value="n" class="letterButton">
+        <input type="button" value="o" class="letterButton">
+        <input type="button" value="p" class="letterButton">
+        <input type="button" value="r" class="letterButton">
+        <input type="button" value="s" class="letterButton">
+        <input type="button" value="t" class="letterButton">
+        <input type="button" value="u" class="letterButton">
+        <input type="button" value="w" class="letterButton">
+        <input type="button" value="x" class="letterButton">
+        <input type="button" value="y" class="letterButton">
+        <input type="button" value="z" class="letterButton">
+    </div>
+
+
+</div>
+
+
+
+
+<div id="game-over" class="modal" style="display: none;">
+    <div>GAME OVER 😵</div>
+</div>
+
+
+<div id="winner" class="modal" style="display: none;">
+    <div>WINNER 😃</div>
+</div>
+
+
+
+
+<script src="program.js"></script>
+</body>
+
+</html>
