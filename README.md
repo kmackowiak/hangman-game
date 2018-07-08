@@ -11,7 +11,7 @@ Simple word game consists in guessing the drawn words.
 
 ### Screenshots
 
-![Alt text](images/screenshots/01.png?raw=true "Optional Title")
+![Screenshot](images/screenshots/01.png?raw=true)
 
 
 ## Authors
